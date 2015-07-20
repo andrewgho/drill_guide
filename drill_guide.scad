@@ -4,7 +4,7 @@
 // Center and guide an 11/16" drill bit to drill a coaxial hole onto the 
 // end of a 3/4" hardwood dowel.
 //
-// https://www.shapeways.com/product/2CF7BEVJN/
+// http://www.shapeways.com/product/2CF7BEVJN/3-4-quot-dowel-drill-guide
 
 total_height = 1 + (3/4);
 shaft_height = 1;
