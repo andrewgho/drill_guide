@@ -1,14 +1,17 @@
-// drill_guide.scad - main portion of 3/4" dowel drill guide
+// drill_guide_coaxial.scad - 3/4" dowel coaxial hole drill guide
 // Andrew Ho (andrew@zeuscat.com)
 //
-// This file contains the main drill guide portion of a jig designed to
-// center and guide an 11/16" drill bit to drill a coaxial hole for a
-// 1/4" drill bit into the end of a 3/4" hardwood dowel.
+// Center and guide an 11/64" drill bit to drill a coaxial hole for a
+// 1/4" shank wood screw into the end of a 3/4" hardwood dowel.
 //
 // Shapeways part link:
 // http://www.shapeways.com/product/2CF7BEVJN/3-4-quot-dowel-drill-guide
 
 include <dimensions.scad>;
+
+// Hole diameter of 11/64" is for 1/4" shank wood screw in hardwood:
+// http://www.wlfuller.com/html/wood_screw_chart.html
+hole_diameter = 11/64;
 
 difference() {
   // Squared off bottom, rounded top, drill guide extension
