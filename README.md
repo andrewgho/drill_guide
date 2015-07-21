@@ -1,5 +1,5 @@
-Drill Guide - 3/4" Dowel Drill Guides
-=====================================
+Drill Guide - ¾" Dowel Drill Guides
+===================================
 
 This repository contains
 [OpenSCAD](http://www.openscad.org/)
