@@ -9,7 +9,7 @@
 
 guide_height = 3/4;      // Height of drill guides
 shaft_height = 1;        // Just how far the dowel enters into the shaft
-inner_diameter = 3/4;    // Diameter of dowel that will enter the shaft
+inner_diameter = 49/64;  // Diameter of dowel (3/4" + 1/64" fudge factor)
 hull_thickness = 1/8;    // Size of thinnest wall
 
 // Interpolated values
