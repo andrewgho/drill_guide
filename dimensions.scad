@@ -7,10 +7,10 @@
 // 1/8" drill bit to drill a sideways hole for a #8 wood screw into the
 // side of the dowel.
 
-guide_height = 3/4;      // Height of drill guides
-shaft_height = 1;        // Just how far the dowel enters into the shaft
-inner_diameter = 49/64;  // Diameter of dowel (3/4" + 1/64" fudge factor)
-hull_thickness = 1/8;    // Size of thinnest wall
+guide_height = 3/4;           // Height of drill guides
+shaft_height = 1;             // Just how far the dowel enters into the shaft
+inner_diameter = 3/4 + 1/32;  // Diameter of dowel, plus fudge factor
+hull_thickness = 1/8;         // Size of thinnest wall
 
 // Interpolated values
 total_height = guide_height + shaft_height;
