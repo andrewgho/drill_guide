@@ -13,6 +13,9 @@ include <dimensions.scad>;
 // http://www.wlfuller.com/html/wood_screw_chart.html
 hole_diameter = 11/64;
 
+// Prevent edge rendering artifacts in OpenSCAD preview mode
+extra = 1/64;
+
 difference() {
   // Squared off bottom, rounded top, drill guide extension
   union() {
@@ -24,7 +27,9 @@ difference() {
 
   // Drill through hole, shaft for dowel
   union() {
-    cylinder360(total_height, hole_diameter);
-    cylinder360(shaft_height, inner_diameter);
+    translate([0, 0, -extra])
+      cylinder360(total_height + (extra * 2), hole_diameter);
+    translate([0, 0, -extra])
+    cylinder360(shaft_height + extra, inner_diameter);
   }
 }

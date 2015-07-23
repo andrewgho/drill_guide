@@ -10,6 +10,9 @@ include <dimensions.scad>;
 // http://www.wlfuller.com/html/wood_screw_chart.html
 hole_diameter = 1/8;
 
+// Prevent edge rendering artifacts in OpenSCAD preview mode
+extra = 1/64;
+
 difference() {
   // Squared off bottom and far side, rounded top, drill guide extension
   union() {
@@ -31,16 +34,18 @@ difference() {
                (-outer_diameter / 2) - ((hole_diameter / 2) + hull_thickness),
                0])
       difference() {
-        translate([-hull_thickness, 0, 0])
-          cube([outer_diameter + (2 * hull_thickness),
+        translate([-extra, 0, 0])
+          cube([outer_diameter + (2 * extra),
                 outer_diameter,
                 shaft_height]);
         translate([outer_diameter / 2, outer_diameter, 0])
           cylinder360(shaft_height, outer_diameter);
       }
-    translate([0, 0, shaft_height / 2])
+    translate([-extra, 0, shaft_height / 2])
     rotate([0, 90, 0])
-      cylinder360((inner_diameter / 2) + guide_height, hole_diameter);
-    cylinder360(shaft_height, inner_diameter);
+      cylinder360((inner_diameter / 2) + guide_height + (extra * 2),
+                  hole_diameter);
+    translate([0, 0, -extra])
+      cylinder360(shaft_height + (extra * 2), inner_diameter);
   }
 }
